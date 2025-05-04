@@ -3,70 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Forex Signals Bot</title>
+  <title>Forex Robot Signals</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f2f2f2;
       margin: 0;
       padding: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background: #1e1e2f;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
     }
     .container {
-      max-width: 700px;
-      margin: 40px auto;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       padding: 20px;
     }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
     .signal {
-      background: #e8f5e9;
-      border-left: 5px solid #4caf50;
+      background: #fff;
       padding: 15px;
-      margin: 15px 0;
-      border-radius: 5px;
+      margin-bottom: 10px;
+      border-left: 5px solid green;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .buy {
-      border-color: #2196f3;
-      background: #e3f2fd;
+    .signal.sell {
+      border-left: 5px solid red;
     }
-    .sell {
-      border-color: #f44336;
-      background: #ffebee;
+    .timestamp {
+      font-size: 0.85rem;
+      color: #888;
+    }
+    .pair {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .type {
+      font-size: 1rem;
+      font-weight: bold;
     }
     .footer {
       text-align: center;
-      margin-top: 40px;
-      color: #777;
+      padding: 20px;
+      background: #1e1e2f;
+      color: #fff;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .footer a {
+      color: #00ffff;
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Forex Robot Signals</h1>
-    <div class="signal buy">
-      <strong>BUY</strong> EUR/USD at 1.1045<br/>
-      TP: 1.1100 | SL: 1.1010
-    </div>
-    <div class="signal sell">
-      <strong>SELL</strong> GBP/JPY at 155.30<br/>
-      TP: 154.70 | SL: 155.80
-    </div>
-    <div class="signal buy">
-      <strong>BUY</strong> USD/JPY at 110.20<br/>
-      TP: 110.80 | SL: 109.90
-    </div>
-    <div class="signal sell">
-      <strong>SELL</strong> AUD/USD at 0.7350<br/>
-      TP: 0.7300 | SL: 0.7380
-    </div>
-    <div class="footer">
-      &copy; 2025 Forex Signals AI Bot
-    </div>
+
+<header>
+  <h1>Forex Robot Live Signals</h1>
+</header>
+
+<div class="container">
+  <div class="signal buy">
+    <div class="timestamp">2025-05-04 10:00 UTC</div>
+    <div class="pair">EUR/USD</div>
+    <div class="type">BUY</div>
   </div>
+  <div class="signal sell">
+    <div class="timestamp">2025-05-04 09:45 UTC</div>
+    <div class="pair">GBP/JPY</div>
+    <div class="type">SELL</div>
+  </div>
+  <div class="signal buy">
+    <div class="timestamp">2025-05-04 09:30 UTC</div>
+    <div class="pair">USD/CHF</div>
+    <div class="type">BUY</div>
+  </div>
+</div>
+
+<div class="footer">
+  &copy; 2025 Forex Robot. All rights reserved. |
+  <a href="https://github.com/aron683/forexrobot.git" target="_blank">GitHub Repo</a>
+</div>
+
 </body>
 </html>
